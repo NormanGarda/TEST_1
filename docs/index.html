@@ -1,9 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>	
+body {
+  background-color: rgb(64, 64, 64);
+  font-family: verdana;
+  color: rgb(217, 217, 217);
+   }
+   div {  
+  padding: 10px 25px 25px 25px;
+ 
+}
 
-<HTML>
-<HEAD>
-<TITLE>ejemplo hola mundo</TITLE>
-</HEAD>
-<BODY>
-<P>Hola Mundo</P>
-</BODY>
-</HTML>
+</style>
+
+</head>
+<body>
+  
+ 
+  
+ <ul class="nav nav-tabs nav-justified">
+  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+  <li><a data-toggle="tab" href="#Powers">Powers</a></li>
+  <li><a data-toggle="tab" href="#WoundChart">Wound Chart</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h3>HOME</h3>
+    <p>Some content.</p>
+  </div>
+  
+
+  <div id="Powers" class="tab-pane fade"  >   <!--inicio div poderes-->
+    
+	<button type="button"   class="btn btn-default" data-toggle="collapse" data-target="#descPowers">  Powers </button>
+
+		<div id="descPowers" class="collapse">
+		 <p>
+			Models who have access to Powers may choose Powers from this list when making their lists. Powers have a 12” range unless stated otherwise. Power effects are active until the user’s next activation or until the user dies (whichever comes first). Healing and Summon effects do not go away like the other powers.
+		 </p> <br>
+		 <p>
+		 No stat value other than Hit Points may ever be lower than 1 after all modifiers. No stat other than Movement may ever be higher than 8 after all modifiers. <b>Powers require line of sight to the target. A Power can only be taken once per model.</b>
+		 </p>		 
+		</div>
+
+	 
+	 
+		<div class="btn-group"> <!--inicio grupo botones poderes-->
+			<button type="button"   class="btn btn-default" onclick="displayBarrier()">Barrier</button>
+			<button type="button"   class="btn btn-default" onclick="displayCurse()">Curse</button>
+			<button type="button"   class="btn btn-default" onclick="displayDisrupt()">Disrupt</button>
+			<button type="button"   class="btn btn-default" onclick="displayAura()">Aura</button>
+			<button type="button"   class="btn btn-default" onclick="displaySummon()">Summon</button>
+			<button type="button"   class="btn btn-default" onclick="displayTimeSlip()">Time Slip</button>
+			<button type="button"   class="btn btn-default" onclick="displayTeleport()">Teleport</button>
+			<button type="button"   class="btn btn-default" onclick="displayProtect()">Protect</button>
+			<button type="button"   class="btn btn-default" onclick="displayHealing()">Healing</button>
+			<button type="button"   class="btn btn-default" onclick="displayMissile()">Missile</button>
+		</div><!--fin grupo botones poderes-->
+	 
+	 <div id="ParrafoDescPoderes"></div>
+	 
+
+	 
+	 
+  </div> <!-- fin div poderes-->
+  
+  
+
+  <div id="WoundChart" class="tab-pane fade">  <!--inicio div Woundchart-->
+    <h3>Wound Chart</h3>
+    
+		 <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+        <td>Pitt</td>
+        <td>35</td>
+        <td>New York</td>
+        <td>USA</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+	
+	
+	
+  </div>   <!--fin div Woundchart-->
+
+</div>
+ 
+ 
+ <script>
+function displayBarrier() {
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Choose one of the two options each time you use this power. The line must start within your range and line of sight but may stretch out of range or sight and may be in any direction <br><br> <u>Hindering Barrier :</u> Place a 6” long straight line within your range that may not be moved through or over. It provides Partial Cover if shot through (+1 Save).<br> <br> <u>Concealing Barrier :</u> Place a 6” straight line within your range. This may not be seen or shot through but may be moved through.";
+}
+
+function displayCurse() {
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Curse";
+}
+
+function displayDisrupt() {
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Disrupt";
+}
+function displayAura() {
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Aura";
+}
+function displaySummon() {
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Summon";
+}
+function displayTimeSlip() {
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Time Slip";
+}
+function displayTeleport() {
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Teleport";
+}
+function displayProtect() {
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Protect";
+}
+function displayHealing() {
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Healing";
+}
+function displayMissile() {
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Missile";
+}
+
+</script>
+ 
+ 
+</body>
+</html>
+
+
+ 
+
+
+
+
+
+
+
