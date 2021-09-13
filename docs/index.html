@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>TEST_INDEX</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
 <style>	
 body {
   background-color: rgb(64, 64, 64);
@@ -14,33 +15,61 @@ body {
   color: rgb(217, 217, 217);
    }
    div {  
-  padding: 10px 25px 25px 25px;
+  padding: 5px 10px 10px 10px;
  
 }
+table {
+  width: 100%;
+   
+}
+td {
+  text-align: center;
+}
+tr{height: 30px;}
 
 </style>
 
 </head>
 <body>
   
- 
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">BrutalityIndex</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+	  
+        <li><a class="active" data-toggle="tab"  href="#Home">Home</a></li>
+        <li><a data-toggle="tab" href="#Powers">Powers</a></li>
+        <li><a data-toggle="tab" href="#WoundChart">Wound Chart</a></li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
   
- <ul class="nav nav-tabs nav-justified">
-  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-  <li><a data-toggle="tab" href="#Powers">Powers</a></li>
-  <li><a data-toggle="tab" href="#WoundChart">Wound Chart</a></li>
-</ul>
+ 
 
 <div class="tab-content">
-  <div id="home" class="tab-pane fade in active">
-    <h3>HOME</h3>
-    <p>Some content.</p>
-  </div>
   
+ <div id="Home" class="tab-pane fade in active">  <!--inicio div Home-->
+
+ <h3>Vale x 1 HOME</h3>
+
+
+ 
+  </div> <!--fin div Home-->
 
   <div id="Powers" class="tab-pane fade"  >   <!--inicio div poderes-->
     
-	<button type="button"   class="btn btn-default" data-toggle="collapse" data-target="#descPowers">  Powers </button>
+	<button type="button"   class="btn btn-default" data-toggle="collapse" data-target="#descPowers">  Power Notes </button>
 
 		<div id="descPowers" class="collapse">
 		 <p>
@@ -51,30 +80,30 @@ body {
 		 </p>		 
 		</div>
 
+	 <br> <br>
 	 
-	 
-		<div class="btn-group"> <!--inicio grupo botones poderes-->
-			<button type="button"   class="btn btn-default" onclick="displayBarrier()">Barrier</button>
-			<button type="button"   class="btn btn-default" onclick="displayCurse()">Curse</button>
-			<button type="button"   class="btn btn-default" onclick="displayDisrupt()">Disrupt</button>
-			<button type="button"   class="btn btn-default" onclick="displayAura()">Aura</button>
-			<button type="button"   class="btn btn-default" onclick="displaySummon()">Summon</button>
-			<button type="button"   class="btn btn-default" onclick="displayTimeSlip()">Time Slip</button>
-			<button type="button"   class="btn btn-default" onclick="displayTeleport()">Teleport</button>
-			<button type="button"   class="btn btn-default" onclick="displayProtect()">Protect</button>
-			<button type="button"   class="btn btn-default" onclick="displayHealing()">Healing</button>
-			<button type="button"   class="btn btn-default" onclick="displayMissile()">Missile</button>
-		</div><!--fin grupo botones poderes-->
-	 
+		<!--<div class="btn-group"> inicio grupo botones poderes-->
+			<button type="button"   class="btn btn-default  " onclick="displayBarrier()">Barrier</button>
+			<button type="button"   class="btn btn-default " onclick="displayCurse()">Curse</button>
+			<button type="button"   class="btn btn-default " onclick="displayDisrupt()">Disrupt</button>
+			<button type="button"   class="btn btn-default " onclick="displayAura()">Aura</button>
+			<button type="button"   class="btn btn-default " onclick="displaySummon()">Summon</button>
+			<button type="button"   class="btn btn-default " onclick="displayTimeSlip()">Time Slip</button>
+			<button type="button"   class="btn btn-default " onclick="displayTeleport()">Teleport</button>
+			<button type="button"   class="btn btn-default " onclick="displayProtect()">Protect</button>
+			<button type="button"   class="btn btn-default " onclick="displayHealing()">Healing</button>
+			<button type="button"   class="btn btn-default " onclick="displayMissile()">Missile</button>
+		<!--</div>fin grupo botones poderes-->
+	 <br><br>
 	 <div id="ParrafoDescPoderes"></div>
 	 
 
-	 
+	
+
+
 	 
   </div> <!-- fin div poderes-->
   
-  
-
   <div id="WoundChart" class="tab-pane fade">  <!--inicio div Woundchart-->
     <h3>Wound Chart</h3>
     
@@ -116,32 +145,32 @@ function displayBarrier() {
 }
 
 function displayCurse() {
-  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Curse";
+  document.getElementById("ParrafoDescPoderes").innerHTML = "<p> Choose one of the options each time you use this Power. Target enemy gains a Curse token which is one of the following effects:</p> <br><table ><tbody><tr><td> -2 to Fighting Skill</td><td>-4” Movement</td><td>-4” to Charge rolls</td></tr><tr><td> -2 to Willpower</td><td>-2 to Dexterity</td></tr><tr><td>-1 to Attacks</td><td>-1 to Save</td></tr>    </tbody>  </table>";
 }
 
 function displayDisrupt() {
-  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Disrupt";
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Choose one of the two options each time you use this power<br><br><u>Befuddle:</u> All enemy models within 4” of the user receive a Confusion token. (See Wound Chart) <br><br><u>Pause :</u> Give Target Enemy a Pause token; they may not Move or perform any Actions for the rest of the game. At the start of each of its activations, the effected enemy model may take a Dexterity check to break free in order to move and make actions as normal for the rest of the game.";
 }
 function displayAura() {
-  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Aura";
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Give Target Ally an Aura Token.<br><br>As soon as the target ally is in base-to-base contact with an enemy, the enemy immediately takes 2 Wound Chart rolls with no Saves allowed.<br> <br>This resolves before Melee attacks are made.";
 }
 function displaySummon() {
-  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Summon";
+  document.getElementById("ParrafoDescPoderes").innerHTML = " The Power user removes 1 Hit Point from itself that cannot be healed this game, and places a summoned model within 12”. <br><br>If the Willpower check to use Summon is a Critical Success, the summoned model is spawned with 2 Hit Points, but the Summoner still only loses 1 Hit Point.<br> <br>This new model has the following stat line and starts activating as normal on the turn it comes in.<br><br> If either the summoned model or Summoner is killed, remove the summoned model from the board. Otherwise, the summoned model activates like any other model until the end of the game.<br><br>";
 }
 function displayTimeSlip() {
-  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Time Slip";
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Give Target Ally a Time Slip Token. <br><br>They may remove this token to turn any single failed To Hit, Save, Charge, or Stat Check (such as Willpower checks, etc.) roll of theirs into a success.";
 }
 function displayTeleport() {
-  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Teleport";
+  document.getElementById("ParrafoDescPoderes").innerHTML = " Choose one of the two options each time you use this power. Neither count as the target’s activation:<br><br> <u>Short-Target :</u>Ally is moved up to 8” and gains Flight/Agile only for this movement.<br><br> <u>Long-Target:</u> Ally is moved up to 16” in any direction and gains Flight/Agile only for this movement. After moving, the target immediately takes a Crushing Wound Chart roll with Saves allowed";
 }
 function displayProtect() {
-  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Protect";
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Give Target Ally a Protect token. Their Save value is +2 points higher and this bonus also applies in Melee.";
 }
 function displayHealing() {
-  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Healing";
+  document.getElementById("ParrafoDescPoderes").innerHTML = "Choose one of the two options each time you use this power <br><br><u>Ranged-Target :</u> Ally within 12” has either 1 lost Hit Point restored or removes one status effect token (like Bleeding,Confusion, etc.)<br><br> <u>Close-Target :</u> Ally within 1” of the caster heals 1 Hit Point and has all status effect tokens removed (like Bleeding, Confusion, etc)";
 }
 function displayMissile() {
-  document.getElementById("ParrafoDescPoderes").innerHTML = "Descripcion del poder Missile";
+  document.getElementById("ParrafoDescPoderes").innerHTML = " Roll a D10 and apply the following effects againstTarget Enemy with no Saves allowed: <br><br>1-4: No Effect<br><br>5-7: 1 Wound Chart Roll<br><br>8-9: 1 Damage<br><br>10: 1 Damage & 1 Wound Chart roll<br><br>";
 }
 
 </script>
